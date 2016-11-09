@@ -3,18 +3,74 @@ main: ${project.groupId}.${project.artifactId}
 version: ${project.version}
 description: ${project.artifactId} Bukkit Plugin
 author: BillyGalbreath
+softdepend:
+- ProtocolLib
 
 commands:
-    pl3xsigns:
-        description: Reload config
-        usage: /<command> (reload)
-        aliases:
-        - pl3xsign
-        - signs
-        - sign
-        - ps
+  pl3xsigns:
+    description: Reload config.
+    usage: /<command> (reload)
+    aliases:
+    - pl3xsign
+    - signs
+  signappend:
+    description: Appends more text to a line on a sign you're looking at.
+    usage: /<command> [line] (text)
+    aliases:
+    - appendsign
+    - sa
+    - as
+  signcopy:
+    description: Copies text to clipboard from a sign you're looking at.
+    usage: /<command>
+    aliases:
+    - copysign
+    - sc
+    - cs
+  signedit:
+    description: Edits a line on a sign you're looking at.
+    usage: /<command> [line] (text)
+    aliases:
+    - editsign
+    - se
+    - es
+  signpaste:
+    description: Pastes text from clipboard to a sign you're looking at.
+    usage: /<command>
+    aliases:
+    - pastesign
+    - sp
+    - ps
+  signundo:
+    description: Undoes the last sign edit you did.
+    usage: /<command>
+    aliases:
+    - undosign
+    - su
+    - us
 
 permissions:
-    command.pl3xsigns:
-        description: Reload config
-        default: op
+  command.pl3xsigns:
+    description: Allows to reload config.
+    default: op
+  command.signappend:
+    description: Allows you to append to an existing sign via command.
+    default: op
+  command.signcopy:
+    description: Allows you to copy sign text to clipboard.
+    default: op
+  command.signedit:
+    description: Allows you to edit an existing sign via command.
+    default: op
+  command.signpaste:
+    description: Allows you to paste clipboard text to sign.
+    default: op
+  command.signundo:
+    description: Allows you to undo sign edits.
+    default: op
+  click.signedit:
+    description: Allows you to edit an existing sign via clicking.
+    default: op
+  sign.color:
+    description: Allows you to use color/style codes on signs.
+    default: op

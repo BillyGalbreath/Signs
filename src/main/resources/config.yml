@@ -6,3 +6,20 @@ color-logs: true
 
 # Language file (for translations)
 language-file: lang-en.yml
+
+# Maximum amount of undo history to keep per player
+max-undo: 10
+
+# Enable this to use the very old and very inaccurate line of sight algorithm
+use-old-line-of-sight: false
+
+# How close must a player be to use sign commands
+line-of-sight-distance: 5
+
+# How accurate the new line of sight algorithm is
+# Default is 0.01 (1/100 of a block)
+# Setting this value too high will give the illusion of
+#   looking through signs without being detected
+# Setting this value too low can cause tps lag spikes
+# Tested 0.01 accuracy with distance of 5 to be ~0.4ms
+line-of-sight-accuracy: 0.01

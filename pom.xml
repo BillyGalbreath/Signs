@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.pl3x.bukkit.pl3xsigns</groupId>
     <artifactId>Pl3xSigns</artifactId>
-    <version>4.0-SNAPSHOT</version>
+    <version>4.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -14,19 +14,19 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>craftbukkit</artifactId>
-            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <version>1.11-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
             <artifactId>ProtocolLib-API</artifactId>
-            <version>4.1.0</version>
+            <version>4.2.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>net.pl3x.bukkit.chatapi</groupId>
             <artifactId>ChatComponentAPI</artifactId>
-            <version>1.1</version>
+            <version>1.2</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

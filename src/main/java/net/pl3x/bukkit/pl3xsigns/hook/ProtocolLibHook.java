@@ -92,7 +92,7 @@ public class ProtocolLibHook {
                     NbtBase<?> obj = iter.next();
                     if (obj instanceof NbtCompound) {
                         NbtCompound nbt = (NbtCompound) obj;
-                        if (!nbt.containsKey("id") || !"Sign".equals(nbt.getString("id"))) {
+                        if (!nbt.containsKey("id") || !"minecraft:sign".equals(nbt.getString("id"))) {
                             continue; // not a sign NBT
                         }
                         nbtList.add(nbt);

@@ -9,6 +9,7 @@ import net.pl3x.bukkit.pl3xsigns.history.HistoryEntry;
 import net.pl3x.bukkit.pl3xsigns.history.HistoryManager;
 import net.pl3x.bukkit.pl3xsigns.hook.NmsHook;
 import net.pl3x.bukkit.pl3xsigns.manager.SignManager;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -18,6 +19,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.SignChangeEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
@@ -87,6 +89,15 @@ public class SignListener implements Listener {
             Lang.send(player, Lang.SIGN_ALREADY_OPEN);
             event.setCancelled(true);
             return; // sign is already being edited by another user
+        }
+
+        Logger.debug("[PlayerInteractEvent] Calling BlockBreakEvent.");
+        BlockBreakEvent blockBreakEvent = new BlockBreakEvent(block, player);
+        Bukkit.getServer().getPluginManager().callEvent(blockBreakEvent);
+        if (blockBreakEvent.isCancelled()) {
+            Lang.send(player, Lang.CANNOT_EDIT_SIGN_HERE);
+            event.setCancelled(true);
+            return; // cannot edit this sign
         }
 
         Logger.debug("[PlayerInteractEvent]" + player.getName() + " opened sign editor.");

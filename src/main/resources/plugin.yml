@@ -3,15 +3,15 @@ main: ${project.groupId}.${project.artifactId}
 version: ${project.version}
 description: ${project.artifactId} Bukkit Plugin
 author: BillyGalbreath
+api-version: 1.13
 softdepend:
 - ProtocolLib
 
 commands:
-  pl3xsigns:
+  signs:
     description: Reload config.
     usage: /<command> (reload)
     aliases:
-    - pl3xsign
     - signs
   signappend:
     description: Appends more text to a line on a sign you're looking at.
@@ -50,7 +50,7 @@ commands:
     - us
 
 permissions:
-  command.pl3xsigns:
+  command.signs:
     description: Allows to reload config.
     default: op
   command.signappend:

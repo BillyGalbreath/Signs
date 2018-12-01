@@ -1,4 +1,4 @@
-package net.pl3x.bukkit.pl3xsigns.event;
+package net.pl3x.bukkit.signs.event;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -9,7 +9,6 @@ public class UpdateSignPacketEvent extends PlayerEvent {
     private static final HandlerList handlerList = new HandlerList();
     private final Location location;
     private String[] lines;
-    private boolean forceColor = false;
 
     public UpdateSignPacketEvent(Player player, String[] lines, Location location) {
         super(player);
@@ -27,14 +26,6 @@ public class UpdateSignPacketEvent extends PlayerEvent {
 
     public Location getLocation() {
         return location;
-    }
-
-    public boolean isForceColor() {
-        return forceColor;
-    }
-
-    public void setForceColor(boolean forceColor) {
-        this.forceColor = forceColor;
     }
 
     @Override

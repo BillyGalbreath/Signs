@@ -1,9 +1,8 @@
-package net.pl3x.bukkit.pl3xsigns.command;
+package net.pl3x.bukkit.signs.command;
 
-import net.pl3x.bukkit.pl3xsigns.Logger;
-import net.pl3x.bukkit.pl3xsigns.Pl3xSigns;
-import net.pl3x.bukkit.pl3xsigns.configuration.Config;
-import net.pl3x.bukkit.pl3xsigns.configuration.Lang;
+import net.pl3x.bukkit.signs.Signs;
+import net.pl3x.bukkit.signs.configuration.Config;
+import net.pl3x.bukkit.signs.configuration.Lang;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -11,10 +10,10 @@ import org.bukkit.command.TabExecutor;
 import java.util.Collections;
 import java.util.List;
 
-public class CmdPl3xSigns implements TabExecutor {
-    private Pl3xSigns plugin;
+public class CmdSigns implements TabExecutor {
+    private Signs plugin;
 
-    public CmdPl3xSigns(Pl3xSigns plugin) {
+    public CmdSigns(Signs plugin) {
         this.plugin = plugin;
     }
 
@@ -28,16 +27,13 @@ public class CmdPl3xSigns implements TabExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.hasPermission("command.pl3xsigns")) {
+        if (!sender.hasPermission("command.signs")) {
             Lang.send(sender, Lang.COMMAND_NO_PERMISSION);
             return true;
         }
 
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
-            Logger.debug("Reloading config...");
             Config.reload();
-
-            Logger.debug("Reloading language file...");
             Lang.reload();
 
             Lang.send(sender, Lang.RELOAD

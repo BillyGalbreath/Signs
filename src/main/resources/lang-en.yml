@@ -1,22 +1,23 @@
-command-no-permission: "&4You do not have permission for that!"
-player-command: "&4This command is only available to players."
+command-no-permission: "&4You do not have permission for that command!"
+player-command: "&4This command is only available to players!"
 
-cannot-put-sign-here: "&4Cannot place sign here!"
-cannot-edit-sign-here: "&4Cannot edit sign here!"
-no-line-specified: "&4You must specify a line number to append to!"
+cannot-edit-sign-here: "&4Cannot edit that sign!"
 not-looking-at-sign: "&4Not looking at a sign!"
+
+no-line-specified: "&4You must specify a line number!"
 line-must-be-number: "&4Line must be a number!"
 line-out-of-range: "&4Acceptable line range is 1 - 4 only!"
+
 clipboard-empty: "&4Clipboard is empty! Use /signcopy first."
 nothing-to-undo: "&4No edits to undo!"
-undo-sign-missing: "&4Sign to undo is no longer there! Removed from undo history!"
+
 sign-already-open: "&4Someone is already editing this sign!"
 
 sign-appended: "&dSign appended."
-sign-copied: "&dSign copied. Use /signpaste to paste."
+sign-copied: "&dSign copied to clipboard. Use /signpaste to paste."
 sign-edited: "&dSign edited."
 sign-pasted: "&dSign pasted."
 sign-undone: "&dSing edit undone."
 
-version: "&d{plugin} v{version}"
+version: "&d{plugin} v{version}."
 reload: "&d{plugin} v{version} reloaded."

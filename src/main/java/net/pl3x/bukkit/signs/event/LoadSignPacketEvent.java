@@ -1,6 +1,6 @@
-package net.pl3x.bukkit.pl3xsigns.event;
+package net.pl3x.bukkit.signs.event;
 
-import net.pl3x.bukkit.pl3xsigns.SignData;
+import net.pl3x.bukkit.signs.protocollib.SignData;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
@@ -10,7 +10,6 @@ import java.util.List;
 public class LoadSignPacketEvent extends PlayerEvent {
     private static final HandlerList handlerList = new HandlerList();
     private final List<SignData> signDatas;
-    private boolean forceColor = false;
 
     public LoadSignPacketEvent(Player player, List<SignData> signDatas) {
         super(player);
@@ -19,14 +18,6 @@ public class LoadSignPacketEvent extends PlayerEvent {
 
     public List<SignData> getSignDatas() {
         return signDatas;
-    }
-
-    public boolean isForceColor() {
-        return forceColor;
-    }
-
-    public void setForceColor(boolean forceColor) {
-        this.forceColor = forceColor;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package net.pl3x.bukkit.pl3xsigns;
+package net.pl3x.bukkit.signs.protocollib;
 
 public class SignData {
     private String[] lines;

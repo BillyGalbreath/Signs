@@ -1,16 +1,16 @@
 package net.pl3x.bukkit.signs.manager;
 
-import net.minecraft.server.v1_13_R2.ChatComponentText;
-import net.minecraft.server.v1_13_R2.EntityPlayer;
-import net.minecraft.server.v1_13_R2.IChatBaseComponent;
-import net.minecraft.server.v1_13_R2.NBTTagCompound;
-import net.minecraft.server.v1_13_R2.PacketPlayOutOpenSignEditor;
-import net.minecraft.server.v1_13_R2.PacketPlayOutTileEntityData;
-import net.minecraft.server.v1_13_R2.TileEntitySign;
+import net.minecraft.server.v1_15_R1.ChatComponentText;
+import net.minecraft.server.v1_15_R1.EntityPlayer;
+import net.minecraft.server.v1_15_R1.IChatBaseComponent;
+import net.minecraft.server.v1_15_R1.NBTTagCompound;
+import net.minecraft.server.v1_15_R1.PacketPlayOutOpenSignEditor;
+import net.minecraft.server.v1_15_R1.PacketPlayOutTileEntityData;
+import net.minecraft.server.v1_15_R1.TileEntitySign;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Sign;
-import org.bukkit.craftbukkit.v1_13_R2.block.CraftSign;
-import org.bukkit.craftbukkit.v1_13_R2.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_15_R1.block.CraftSign;
+import org.bukkit.craftbukkit.v1_15_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;

@@ -8,8 +8,8 @@ import com.comphenix.protocol.events.PacketEvent;
 import com.comphenix.protocol.wrappers.BlockPosition;
 import com.comphenix.protocol.wrappers.nbt.NbtBase;
 import com.comphenix.protocol.wrappers.nbt.NbtCompound;
-import net.minecraft.server.v1_13_R2.ChatComponentText;
-import net.minecraft.server.v1_13_R2.IChatBaseComponent;
+import net.minecraft.server.v1_15_R1.ChatComponentText;
+import net.minecraft.server.v1_15_R1.IChatBaseComponent;
 import net.pl3x.bukkit.signs.Signs;
 import net.pl3x.bukkit.signs.event.LoadSignPacketEvent;
 import net.pl3x.bukkit.signs.event.UpdateSignPacketEvent;
@@ -125,7 +125,7 @@ public class ProtocolLibHook {
     private static String parseLine(String raw) {
         IChatBaseComponent component = IChatBaseComponent.ChatSerializer.a(raw);
         if (component != null) {
-            return component.e();
+            return component.getLegacyString();
         }
         return "";
     }

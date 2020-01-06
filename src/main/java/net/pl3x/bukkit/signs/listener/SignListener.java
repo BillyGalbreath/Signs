@@ -8,6 +8,7 @@ import net.pl3x.bukkit.signs.manager.History;
 import net.pl3x.bukkit.signs.protocollib.SignData;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.Tag;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
@@ -58,7 +59,8 @@ public class SignListener implements Listener {
             return;
         }
 
-        if (player.getInventory().getItemInMainHand().getType() != Material.SIGN) {
+        Material type = player.getInventory().getItemInMainHand().getType();
+        if (!(Tag.SIGNS.isTagged(type) || Tag.WALL_SIGNS.isTagged(type) || Tag.STANDING_SIGNS.isTagged(type))) {
             return;
         }
 

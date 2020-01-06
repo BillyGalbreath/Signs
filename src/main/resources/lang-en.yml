@@ -13,6 +13,7 @@ nothing-to-undo: "&4No edits to undo!"
 
 sign-already-open: "&4Someone is already editing this sign!"
 
+sign-prepended: "&dSign prepended."
 sign-appended: "&dSign appended."
 sign-copied: "&dSign copied to clipboard. Use /signpaste to paste."
 sign-edited: "&dSign edited."

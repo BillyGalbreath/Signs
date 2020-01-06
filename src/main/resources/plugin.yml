@@ -13,6 +13,13 @@ commands:
     usage: /<command> (reload)
     aliases:
     - signs
+  signprepend:
+    description: Prepends more text to a line on a sign you're looking at.
+    usage: /<command> [line] (text)
+    aliases:
+      - prependsign
+      - spp
+      - pps
   signappend:
     description: Appends more text to a line on a sign you're looking at.
     usage: /<command> [line] (text)
@@ -52,6 +59,9 @@ commands:
 permissions:
   command.signs:
     description: Allows to reload config.
+    default: op
+  command.sigprepend:
+    description: Allows you to prepend to an existing sign via command.
     default: op
   command.signappend:
     description: Allows you to append to an existing sign via command.

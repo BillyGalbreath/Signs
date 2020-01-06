@@ -25,6 +25,7 @@ public class Signs extends JavaPlugin {
         getCommand("signs").setExecutor(new CmdSigns(this));
 
         getCommand("signedit").setExecutor(new CmdSignEdit());
+        getCommand("signprepend").setExecutor(new CmdSignEdit());
         getCommand("signappend").setExecutor(new CmdSignEdit());
 
         getCommand("signcopy").setExecutor(new CmdSignCopy());

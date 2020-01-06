@@ -24,6 +24,7 @@ public class Lang {
 
     public static String SIGN_ALREADY_OPEN = "&4Someone is already editing this sign!";
 
+    public static String SIGN_PREPENDED = "&dSign prepended.";
     public static String SIGN_APPENDED = "&dSign appended.";
     public static String SIGN_COPIED = "&dSign copied to clipboard. Use /signpaste to paste.";
     public static String SIGN_EDITED = "&dSign edited.";
@@ -57,6 +58,7 @@ public class Lang {
 
         SIGN_ALREADY_OPEN = config.getString("sign-already-open", "&4Someone is already editing this sign!");
 
+        SIGN_PREPENDED = config.getString("sign-prepended", "&dSign prepended.");
         SIGN_APPENDED = config.getString("sign-appended", "&dSign appended.");
         SIGN_COPIED = config.getString("sign-copied", "&dSign copied to clipboard. Use /signpaste to paste.");
         SIGN_EDITED = config.getString("sign-edited", "&dSign edited.");

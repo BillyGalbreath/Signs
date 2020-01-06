@@ -51,14 +51,27 @@ public class CmdSignEdit implements TabExecutor {
         String newText = Util.join(args);
 
         boolean append = cmd.getLabel().equals("signappend");
+
         if (append) {
             newText = lines[line] + newText;
+        }
+
+        boolean prepend = cmd.getLabel().equals("signprepend");
+
+        if (prepend) {
+            newText = newText + lines[line];
         }
 
         lines[line] = newText;
 
         if (Util.editSign(player, sign, lines)) {
-            Lang.send(sender, append ? Lang.SIGN_APPENDED : Lang.SIGN_EDITED);
+            if (append) {
+                Lang.send(sender, Lang.SIGN_APPENDED);
+            } else if (prepend) {
+                Lang.send(sender, Lang.SIGN_PREPENDED);
+            } else {
+                Lang.send(sender, Lang.SIGN_EDITED);
+            }
         }
         return true;
     }
